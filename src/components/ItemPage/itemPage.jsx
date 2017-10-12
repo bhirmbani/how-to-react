@@ -6,7 +6,7 @@ import ItemDetails from "../ItemDetails/itemDetails";
 const ItemPage = () => (
   <div>
     {mockData.items.map(item => (
-      <ItemDetails item={item} />
+      <ItemDetails key={item.id} item={item} />
     ))}
   </div>
 );
