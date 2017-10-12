@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "TV",
+      "price": 2500000
+    },
+    {
+      "id": 2,
+      "name": "Hape",
+      "price": 9700000
+    },
+    {
+      "id": 3,
+      "name": "Celana Chino",
+      "price": 250000
+    }
+  ]
+}

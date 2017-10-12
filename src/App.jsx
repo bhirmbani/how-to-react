@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import LandingPage from "./components/Landing/landing";
-import ItemPage from "./components/Item/item";
+import LandingPage from "./components/LandingPage/landingPage";
+import ItemPage from "./components/ItemPage/itemPage";
 import PageNotFound from "./components/PageNotFound/pageNotFound";
 
 const Test = () => (
