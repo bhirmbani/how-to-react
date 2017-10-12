@@ -1,11 +1,16 @@
 import React from "react";
-import { shape, string, number } from 'prop-types';
+import { shape, string, number } from "prop-types";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  background-color: peru;
+`;
 
 const ItemDetails = props => (
-  <div>
+  <Wrapper>
     <h3>{props.item.name}</h3>
     <p>{props.item.price}</p>
-  </div>
+  </Wrapper>
 );
 
 ItemDetails.propTypes = {
@@ -13,6 +18,6 @@ ItemDetails.propTypes = {
     name: string.isRequired,
     price: number.isRequired
   }).isRequired
-}
+};
 
 export default ItemDetails;
