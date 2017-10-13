@@ -11,6 +11,14 @@
     "test:update": "jest -u",
     "watch": "webpack --watch"
   },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./helpers/tempRafPollyfills", "./helpers/enzyme_setup"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +31,8 @@
     "compression": "^1.7.1",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
@@ -51,7 +61,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
-    "enzyme": "^3.1.0",
+    "enzyme-to-json": "^3.1.2",
     "eslint": "^4.8.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-config-prettier": "^2.6.0",
@@ -65,7 +75,6 @@
     "eslint-plugin-react": "^7.4.0",
     "flow-bin": "^0.56.0",
     "jest": "^21.2.1",
-    "jest-serializer-enzyme": "^1.0.0",
     "moxios": "^0.4.0",
     "prettier": "^1.7.4",
     "react-hot-loader": "^3.0.0",
