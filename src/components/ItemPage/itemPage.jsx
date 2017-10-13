@@ -9,13 +9,11 @@ class ItemPage extends Component {
     this.state = {
       searchInput: ""
     };
-
-    this.handleSearchInput = this.handleSearchInput.bind(this);
   }
 
-  handleSearchInput(e) {
+  handleSearchInput = e => {
     this.setState({ searchInput: e.target.value });
-  }
+  };
 
   render() {
     return (
