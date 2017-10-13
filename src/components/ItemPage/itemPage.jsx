@@ -4,11 +4,8 @@ import mockData from "../../mock/api.json";
 import ItemDetails from "../ItemDetails/itemDetails";
 
 class ItemPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchInput: ""
-    };
+  state = {
+    searchInput: ''
   }
 
   handleSearchInput = e => {
