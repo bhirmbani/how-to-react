@@ -5,8 +5,8 @@ import ItemDetails from "../ItemDetails/itemDetails";
 
 class ItemPage extends Component {
   state = {
-    searchInput: ''
-  }
+    searchInput: ""
+  };
 
   handleSearchInput = e => {
     this.setState({ searchInput: e.target.value });
@@ -21,7 +21,14 @@ class ItemPage extends Component {
           type="text"
           placeholder="Search..."
         />
-        {mockData.items.map(item => <ItemDetails key={item.id} item={item} />)}
+        {mockData.items
+          .filter(
+            item =>
+              `${item.name} ${item.price}`
+                .toLowerCase()
+                .indexOf(this.state.searchInput.toLowerCase()) >= 0
+          )
+          .map(item => <ItemDetails key={item.id} item={item} />)}
       </div>
     );
   }
