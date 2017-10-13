@@ -12,8 +12,8 @@ exports[`ItemPage renders correctly 1`] = `
     item={
       Object {
         "id": 1,
-        "name": "TV",
-        "price": 2500000,
+        "name": "TV LG Smart 25 Inch",
+        "price": 3299999,
       }
     }
     key="1"
@@ -22,8 +22,8 @@ exports[`ItemPage renders correctly 1`] = `
     item={
       Object {
         "id": 2,
-        "name": "Hape",
-        "price": 9700000,
+        "name": "Samsung Galaxy Note S8",
+        "price": 10999999,
       }
     }
     key="2"
@@ -32,7 +32,7 @@ exports[`ItemPage renders correctly 1`] = `
     item={
       Object {
         "id": 3,
-        "name": "Celana Chino",
+        "name": "Celana Chino Krem",
         "price": 250000,
       }
     }
