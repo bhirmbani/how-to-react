@@ -7,7 +7,8 @@
     "build": "webpack",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:update": "jest -u",
     "watch": "webpack --watch"
   },
   "author": "",

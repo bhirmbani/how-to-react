@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemPage renders correctly 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    placeholder="Search..."
+    type="text"
+    value=""
+  />
+  <div
+    className="sc-bdVaJa icLNKT"
+  >
+    <h3>
+      TV
+    </h3>
+    <p>
+      2500000
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa icLNKT"
+  >
+    <h3>
+      Hape
+    </h3>
+    <p>
+      9700000
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa icLNKT"
+  >
+    <h3>
+      Celana Chino
+    </h3>
+    <p>
+      250000
+    </p>
+  </div>
+</div>
+`;
