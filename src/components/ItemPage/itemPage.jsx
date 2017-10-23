@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import mockData from "../../mock/api.json";
+// import mockData from "../../mock/api.json";
 import ItemDetails from "../ItemDetails/itemDetails";
+import filterItem from "../modules/filterItem";
 
 class ItemPage extends Component {
   state = {
@@ -21,13 +22,7 @@ class ItemPage extends Component {
           type="text"
           placeholder="Search..."
         />
-        {mockData.items
-          .filter(
-            item =>
-              `${item.name} ${item.price}`
-                .toLowerCase()
-                .indexOf(this.state.searchInput.toLowerCase()) >= 0
-          )
+        {filterItem(this.state.searchInput)
           .map(item => <ItemDetails key={item.id} item={item} />)}
       </div>
     );
