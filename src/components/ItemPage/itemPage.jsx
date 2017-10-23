@@ -1,16 +1,22 @@
-import React, { Component } from "react";
+// @flow
+
+import React from "react";
 
 // import mockData from "../../mock/api.json";
 import ItemDetails from "../ItemDetails/itemDetails";
 import filterItem from "../modules/filterItem";
 
-class ItemPage extends Component {
+type State = {
+  searchInput: string,
+}
+
+class ItemPage extends React.Component<{}, State> {
   state = {
-    searchInput: ""
+    searchInput: ''
   };
 
-  handleSearchInput = e => {
-    this.setState({ searchInput: e.target.value });
+  handleSearchInput = (e: SyntheticKeyboardEvent<HTMLInputElement>) => {
+    this.setState({ searchInput: e.currentTarget.value });
   };
 
   render() {
@@ -22,8 +28,9 @@ class ItemPage extends Component {
           type="text"
           placeholder="Search..."
         />
-        {filterItem(this.state.searchInput)
-          .map(item => <ItemDetails key={item.id} item={item} />)}
+        {filterItem(this.state.searchInput).map(item => (
+          <ItemDetails key={item.id} item={item} />
+        ))}
       </div>
     );
   }

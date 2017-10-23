@@ -1,6 +1,8 @@
+// @flow
+
 import mockData from "../../mock/api.json";
 
-const methods = input => {
+const methods = (input: string) => {
   const result = mockData.items.filter(
     item =>
       `${item.name} ${item.price}`.toLowerCase().indexOf(input.toLowerCase()) >=

@@ -7,6 +7,8 @@
     "build": "webpack",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "dev": "./node_modules/.bin/webpack-dev-server",
+    "flow": "./node_modules/.bin/flow",
+    "flow:init": "./node_modules/.bin/flow init",
     "test": "jest",
     "test:update": "jest -u",
     "test:coverage": "jest --coverage",
