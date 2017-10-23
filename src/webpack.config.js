@@ -1,16 +1,24 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   context: __dirname,
-  entry: "./index.jsx",
+  entry: [
+    "react-hot-loader/patch",
+    "webpack-dev-server/client?http://localhost:8080",
+    "webpack/hot/only-dev-server",
+    "./ClientApp.jsx"
+  ],
   devtool: "cheap-eval-source-map",
   output: {
     path: path.join(__dirname, "public"),
+    publicPath: "/public/",
     filename: "bundle.js"
   },
   devServer: {
-    publicPath: '/public/',
-    historyApiFallback: true,
+    hot: true,
+    publicPath: "/public/",
+    historyApiFallback: true
   },
   resolve: {
     extensions: [".js", ".jsx", ".json"]
@@ -20,13 +28,17 @@ module.exports = {
     reasons: true,
     chunks: true
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
+  ],
   module: {
     rules: [
       {
-        enforce: 'pre',
+        enforce: "pre",
         test: /\.jsx?$/,
-        loader: 'eslint-loader',
-        exclude: '/node_modules'
+        loader: "eslint-loader",
+        exclude: "/node_modules"
       },
       {
         test: /\.jsx?$/,

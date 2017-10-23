@@ -5,7 +5,7 @@ import LandingPage from "./components/LandingPage/landingPage";
 import ItemPage from "./components/ItemPage/itemPage";
 import PageNotFound from "./components/PageNotFound/pageNotFound";
 
-const Test = () => (
+const App = () => (
   <BrowserRouter>
     <div>
       <Switch>
@@ -17,4 +17,4 @@ const Test = () => (
   </BrowserRouter>
 );
 
-export default Test;
+export default App;
