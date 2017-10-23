@@ -20,7 +20,7 @@ test("Item page should render correct amount of items based on search term", () 
   const searchWord = "tv";
   const component = shallow(<ItemPage />);
   component.find("input").simulate("change", {
-    target: { value: searchWord }
+    currentTarget: { value: searchWord }
   })
   const itemCount = filterItemModule(searchWord);
   expect(component.find(ItemDetails).length).toEqual(itemCount.length);
