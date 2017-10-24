@@ -1,18 +1,19 @@
 // @flow
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 // import mockData from "../../mock/api.json";
-import ItemDetails from "../ItemDetails/itemDetails";
+import ItemCards from "../ItemCards/itemCards";
 import filterItem from "../modules/filterItem";
 
 type State = {
-  searchInput: string,
-}
+  searchInput: string
+};
 
 class ItemPage extends React.Component<{}, State> {
   state = {
-    searchInput: ''
+    searchInput: ""
   };
 
   handleSearchInput = (e: SyntheticKeyboardEvent<HTMLInputElement>) => {
@@ -22,6 +23,7 @@ class ItemPage extends React.Component<{}, State> {
   render() {
     return (
       <div>
+        <h1>Daftar Barang</h1>
         <input
           onChange={this.handleSearchInput}
           value={this.state.searchInput}
@@ -29,8 +31,11 @@ class ItemPage extends React.Component<{}, State> {
           placeholder="Search..."
         />
         {filterItem(this.state.searchInput).map(item => (
-          <ItemDetails key={item.id} item={item} />
+          <ItemCards key={item.id} item={item} />
         ))}
+        <Link to="/" href="/">
+          Go back to home
+        </Link>
       </div>
     );
   }

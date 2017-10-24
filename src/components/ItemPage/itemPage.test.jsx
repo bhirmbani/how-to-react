@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import preload from "../../mock/api.json";
 import ItemPage from "./itemPage";
-import ItemDetails from "../ItemDetails/itemDetails";
+import ItemCards from "../ItemCards/itemCards";
 import filterItemModule from "../modules/filterItem";
 
 test("ItemPage renders correctly", () => {
@@ -13,7 +13,7 @@ test("ItemPage renders correctly", () => {
 
 test("Item page should render correct amount of item", () => {
   const component = shallow(<ItemPage />);
-  expect(component.find(ItemDetails).length).toEqual(preload.items.length);
+  expect(component.find(ItemCards).length).toEqual(preload.items.length);
 });
 
 test("Item page should render correct amount of items based on search term", () => {
@@ -23,5 +23,5 @@ test("Item page should render correct amount of items based on search term", () 
     currentTarget: { value: searchWord }
   })
   const itemCount = filterItemModule(searchWord);
-  expect(component.find(ItemDetails).length).toEqual(itemCount.length);
+  expect(component.find(ItemCards).length).toEqual(itemCount.length);
 });

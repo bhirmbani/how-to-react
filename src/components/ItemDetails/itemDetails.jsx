@@ -1,11 +1,6 @@
 // @flow
 
 import React from "react";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-  background-color: peru;
-`;
 
 const ItemDetails = (props: {
   item: {
@@ -13,10 +8,11 @@ const ItemDetails = (props: {
     price: number
   }
 }) => (
-  <Wrapper>
-    <h3>{props.item.name}</h3>
+  <div>
+    <p><strong>{props.item.name}</strong></p>
     <p>{props.item.price}</p>
-  </Wrapper>
-);
+    {/* <pre><code>{JSON.stringify(props, null, 4)}</code></pre> */}
+  </div>
+)
 
 export default ItemDetails;
