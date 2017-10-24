@@ -3,9 +3,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import mockData from "../../mock/api.json";
 import ItemCards from "../ItemCards/itemCards";
 import filterItem from "../modules/filterItem";
+import Title from "../Title/title";
 
 type State = {
   searchInput: string
@@ -23,7 +23,7 @@ class ItemPage extends React.Component<{}, State> {
   render() {
     return (
       <div>
-        <h1>Daftar Barang</h1>
+        <Title isItemPage />
         <input
           onChange={this.handleSearchInput}
           value={this.state.searchInput}

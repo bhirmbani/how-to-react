@@ -2,13 +2,13 @@
 
 import mockData from "../../mock/api.json";
 
-const method = (input: string) => {
-  const result = mockData.items.filter(
+const filterItemMethod = (input: string) => {
+  const filterItemResult = mockData.items.filter(
     item =>
       `${item.name} ${item.price}`.toLowerCase().indexOf(input.toLowerCase()) >=
       0
   );
-  return result;
+  return filterItemResult;
 };
 
-export default method;
+export default filterItemMethod;
