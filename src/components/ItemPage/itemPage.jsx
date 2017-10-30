@@ -1,11 +1,17 @@
 // @flow
 
 import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import ItemCards from "../ItemCards/itemCards";
 import filterItem from "../modules/filterItem";
 import Title from "../Title/title";
+
+const FlexParent = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`;
 
 type State = {
   searchInput: string
@@ -30,9 +36,11 @@ class ItemPage extends React.Component<{}, State> {
           type="text"
           placeholder="Search..."
         />
-        {filterItem(this.state.searchInput).map(item => (
-          <ItemCards key={item.id} item={item} />
-        ))}
+        <FlexParent>
+          {filterItem(this.state.searchInput).map(item => (
+            <ItemCards key={item.id} item={item} />
+          ))}
+        </FlexParent>
         <Link to="/" href="/">
           Go back to home
         </Link>
